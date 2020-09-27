@@ -16,19 +16,16 @@ jobs:
       - uses: actions/checkout@v2
       - name: Sync Upstream
         run: |
-          echo ">>>>> git config --global user.name ClashConfigProvider"
-          git config --global user.name ClashConfigProvider
-          echo ">>>>> git config --global user.email ClashConfigProvider@users.noreply.github.com"
-          git config --global user.email ClashConfigProvider@users.noreply.github.com
-          echo ">>>>> git pull --unshallow"
-          git pull --unshallow
-          echo ">>>>> git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git"
-          git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
-          echo ">>>>>> git fetch upstream"
-          git fetch upstream
-          echo ">>>>>> git checkout origin/master"
-          git checkout origin/master
-          echo ">>>>> git merge --no-edit upstream/master"
-          git merge --no-edit upstream/master
-          echo ">>>>> git push origin/master"
-          git push origin/master
+          git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
+          git pull --force
+          git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
+          git push --force
+          
+          # git config --global user.name ClashConfigProvider
+          # git config --global user.email ClashConfigProvider@users.noreply.github.com
+          # git pull --unshallow
+          # git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
+          # git fetch upstream
+          # git checkout origin/master
+          # git merge --no-edit upstream/master
+          # git push origin/master
