@@ -21,6 +21,6 @@ jobs:
           git pull --unshallow
           git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
           git fetch upstream
-          git checkout master
+          git checkout origin/master
           git merge --no-edit upstream/master
           git push origin master
