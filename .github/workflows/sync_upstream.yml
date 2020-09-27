@@ -6,7 +6,7 @@ name: Sync Upstream
 # events but only for the master branch
 on:
   schedule:
-    - cron: '1 * * * *'
+    - cron: '*/5 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Sync Upstream
         run: |
+          git checkout master
           git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
           git pull --force
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
