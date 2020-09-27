@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Sync Upstream
         run: |
+          git pull --unshallow
           git checkout master
           git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
           git pull --force
