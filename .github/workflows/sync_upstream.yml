@@ -1,0 +1,26 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Sync Upstream
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  schedule:
+    - cron: '1 * * * *'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Sync Upstream
+        run: |
+          git config --global user.name ClashConfigProvider
+          git config --global user.email ClashConfigProvider@users.noreply.github.com
+          git pull --unshallow
+          git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
+          git fetch upstream
+          git checkout master
+          git merge --no-edit upstream/master
+          git push origin master
