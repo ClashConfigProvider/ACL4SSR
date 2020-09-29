@@ -22,6 +22,8 @@ jobs:
           git pull --force
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
           git push --force
+          sleep 15
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ClashConfigProvider/clash-ml.yaml > /dev/null 2>&1
           
           # git config --global user.name ClashConfigProvider
           # git config --global user.email ClashConfigProvider@users.noreply.github.com
