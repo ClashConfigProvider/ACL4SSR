@@ -22,8 +22,15 @@ jobs:
           git pull --force
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
           git push --force
-          sleep 15
-          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ClashConfigProvider/clash-ml.yaml > /dev/null 2>&1
+          sleep 10
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/ProxyGFWlist.yaml > /dev/null 2>&1
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/BanAD.yaml > /dev/null 2>&1
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/BanEasyList.yaml > /dev/null 2>&1
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/BanEasyListChina.yaml > /dev/null 2>&1
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/BanProgramAD.yaml > /dev/null 2>&1
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/LocalAreaNetwork.yaml > /dev/null 2>&1
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/Ruleset/Developer.yaml > /dev/null 2>&1
+          wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/ChinaIp.yaml > /dev/null 2>&1
           
           # git config --global user.name ClashConfigProvider
           # git config --global user.email ClashConfigProvider@users.noreply.github.com
