@@ -31,12 +31,3 @@ jobs:
           wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/LocalAreaNetwork.yaml > /dev/null 2>&1
           wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/Ruleset/Developer.yaml > /dev/null 2>&1
           wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/ChinaIp.yaml > /dev/null 2>&1
-          
-          # git config --global user.name ClashConfigProvider
-          # git config --global user.email ClashConfigProvider@users.noreply.github.com
-          # git pull --unshallow
-          # git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
-          # git fetch upstream
-          # git checkout origin/master
-          # git merge --no-edit upstream/master
-          # git push origin/master
