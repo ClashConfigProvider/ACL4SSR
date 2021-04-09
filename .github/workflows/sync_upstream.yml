@@ -19,9 +19,7 @@ jobs:
           git pull --unshallow
           git checkout master
           git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
-          git fetch --all
-          git reset --hard origin/master 
-          git pull --force
+          git pull --force --allow-unrelated-histories
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
           git push --force
           sleep 10
