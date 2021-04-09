@@ -18,10 +18,13 @@ jobs:
         run: |
           git config --global user.email clash.config.provider@protonmail.com
           git config --global user.name clash_config_provider
-          git pull --unshallow
-          git checkout master
+          # git pull --unshallow
+          # git checkout master
+          # git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
+          # git pull --force --allow-unrelated-histories
+          rm -rf .git *
           git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
-          git pull --force --allow-unrelated-histories
+          git pull
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
           git push --force
           sleep 10
