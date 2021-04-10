@@ -24,7 +24,7 @@ jobs:
           # git pull --force --allow-unrelated-histories
           rm -rf .git *
           git init
-          git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
+          git remote add origin https://github.com/ACL4SSR/ACL4SSR.git
           git pull
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
           git push --force
