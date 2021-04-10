@@ -22,7 +22,7 @@ jobs:
           # git checkout master
           # git remote set-url origin https://github.com/ACL4SSR/ACL4SSR.git
           # git pull --force --allow-unrelated-histories
-          rm -rf .git .gitingnore *
+          rm -rf * .*
           git clone https://github.com/ACL4SSR/ACL4SSR.git .
           git checkout master
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
