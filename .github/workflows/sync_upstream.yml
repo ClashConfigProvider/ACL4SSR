@@ -24,8 +24,9 @@ jobs:
           # git pull --force --allow-unrelated-histories
           rm -rf .git .gitingnore *
           git clone https://github.com/ACL4SSR/ACL4SSR.git .
+          git checkout master
           git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
-          git push --force
+          git push origin master --force
           sleep 10
           wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/ProxyGFWlist.yaml > /dev/null 2>&1
           wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/BanAD.yaml > /dev/null 2>&1
