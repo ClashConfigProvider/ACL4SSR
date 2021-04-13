@@ -18,10 +18,13 @@ jobs:
         run: |
           # git config --global user.email clash.config.provider@protonmail.com
           # git config --global user.name clash_config_provider
-          rm -rf * .git*
-          git clone https://github.com/ACL4SSR/ACL4SSR.git .
+          # rm -rf * .git*
+          # git clone https://github.com/ACL4SSR/ACL4SSR.git .
+          git pull --unshallow
           git checkout master
-          git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
+          git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
+          git pull upstream matser
+          # git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
           git push origin master --force
           sleep 10
           wget -O - https://purge.jsdelivr.net/gh/ClashConfigProvider/ACL4SSR/Clash/Providers/ProxyGFWlist.yaml > /dev/null 2>&1
