@@ -23,7 +23,7 @@ jobs:
           git pull --unshallow
           git checkout master
           git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
-          git pull upstream matser
+          git pull upstream master
           # git remote set-url origin https://github.com/ClashConfigProvider/ACL4SSR.git
           git push origin master --force
           sleep 10
